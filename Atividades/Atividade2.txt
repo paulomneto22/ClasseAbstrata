@@ -1,0 +1,21 @@
+﻿namespace ClasseAbstrata
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Espada espada = new Espada("Espada Longa", 15);
+            Arco arco = new Arco("Arco Élfico", 10);
+
+            espada.ExibirInfo();
+            Console.WriteLine($"Dano de Ataque Crítico da Espada: {espada.CalcularAtaqueCritico()}");
+
+            Console.WriteLine();
+
+            arco.ExibirInfo();
+            Console.WriteLine($"Dano de Ataque Crítico do Arco: {arco.CalcularAtaqueCritico()}");
+
+            Console.ReadLine();
+        }
+    }
+}
