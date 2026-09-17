@@ -1,0 +1,18 @@
+﻿namespace ClasseAbstrata
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Drone D = new Drone();
+
+            ICamera camera = D;
+            camera.TirarFoto();
+
+
+            IVoavel voador = D;
+            voador.Decolar();
+            voador.Pousar();
+        }
+    }
+}
