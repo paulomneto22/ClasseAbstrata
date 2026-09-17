@@ -1,0 +1,21 @@
+﻿namespace ClasseAbstrata
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<IValidavel> campos = new List<IValidavel>
+        {
+            new CampoTexto("Nome", "Neto"),
+            new CampoTexto("Sobrenome", "Mineto"),
+            new CampoNumerico("Idade", "12")
+        };
+
+        foreach (var campo in campos)
+            {
+                var campoFormulario = (CampoFormulario)campo;
+                Console.WriteLine($"{campoFormulario.NomeDoCampo}: {(campo.Validar() ? "Válido" : "Inválido")}");
+            }
+        }
+    }
+}
